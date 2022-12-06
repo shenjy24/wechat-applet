@@ -1,0 +1,17 @@
+{
+    "entryPagePath": "pages/compare/compare",
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/compare/compare"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "debug": true
+}
