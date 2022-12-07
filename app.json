@@ -1,9 +1,10 @@
 {
-    "entryPagePath": "pages/compare/compare",
+    "entryPagePath": "pages/survey/survey",
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
-        "pages/compare/compare"
+        "pages/compare/compare",
+        "pages/survey/survey"
     ],
     "window": {
         "backgroundTextStyle": "light",
