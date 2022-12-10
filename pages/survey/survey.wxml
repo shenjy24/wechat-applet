@@ -2,28 +2,30 @@
     <form bindsubmit="submit">
         <view>
             <text>姓名：</text>
-            <input name="name" value="张三"/>
+            <input name="name" value="{{formData.name}}" bindinput="onNameChange"/>
         </view>
         <view>
             <text>性别：</text>
             <radio-group name="gender">
-                <label><radio value="0" checked/>男</label>
-                <label><radio value="1"/>女</label>
+                <label wx:for="{{gender}}" wx:key="value" bindtap="onGenderChange" data-index="{{index}}">
+                    <radio value="{{item.value}}" checked="{{item.checked}}"/>
+                    {{item.name}}
+                </label>
             </radio-group>
         </view>
         <view>
             <text>专业技能：</text>
             <checkbox-group name="skills">
                 <!-- <label>标签的作用类似于 HTML 中的同名标签，用于单击文本时也可以选中对应的单选或复选框 -->
-                <label><checkbox value="html" checked/>HTML</label>
-                <label><checkbox value="css" checked/>CSS</label>
-                <label><checkbox value="js"/>JavaScript</label>
-                <label><checkbox value="ps"/>Photoshop</label>
+                <label wx:for="{{skills}}" wx:key="value" bindtap="onSkillChange" data-index="{{index}}">
+                    <checkbox value="{{item.value}}" checked="{{item.checked}}"/>
+                    {{item.name}}
+                </label>
             </checkbox-group>
         </view>
         <view>
             <text>您的意见：</text>
-            <textarea name="opinion" value="测试" />
+            <textarea name="opinion" value="{{formData.opinion}}" bindinput="onOpinionChange"/>
         </view>
         <button form-type="submit">提交</button>
     </form>
