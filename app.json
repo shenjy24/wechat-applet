@@ -1,10 +1,11 @@
 {
-    "entryPagePath": "pages/survey/survey",
+    "entryPagePath": "pages/module/calculator/calculator",
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
-        "pages/compare/compare",
-        "pages/survey/survey"
+        "pages/module/compare/compare",
+        "pages/module/survey/survey",
+        "pages/module/calculator/calculator"
     ],
     "window": {
         "backgroundTextStyle": "light",
