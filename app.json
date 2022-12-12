@@ -1,11 +1,12 @@
 {
-    "entryPagePath": "pages/module/calculator/calculator",
+    "entryPagePath": "pages/module/music/music",
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
         "pages/module/compare/compare",
         "pages/module/survey/survey",
-        "pages/module/calculator/calculator"
+        "pages/module/calculator/calculator",
+        "pages/module/music/music"
     ],
     "window": {
         "backgroundTextStyle": "light",
