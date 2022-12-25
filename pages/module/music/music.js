@@ -59,6 +59,18 @@ Page({
         this.setData({ tab: e.detail.current })
     },
 
+    changePage(e) {
+        this.setData({ 
+            tab: e.currentTarget.dataset.page,
+            item: e.currentTarget.dataset.page
+        })
+    },
+
+    change(e) {
+        this.setMusic(e.currentTarget.dataset.index)
+        this.play()
+    },
+
     setMusic(index) {
         let music = this.data.playlist[index]
         this.audioCtx.src = music.src
