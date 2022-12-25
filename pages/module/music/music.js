@@ -12,30 +12,30 @@ Page({
         playlist: [
             {
                 id: 1,
-                title: '钢琴协奏曲',
-                singer: '肖邦',
-                src: '/videos/1.mp3',
+                title: '起风了',
+                singer: '买辣椒也用券',
+                src: '/videos/起风了.mp3',
                 coverImgUrl: '/images/cover.png'
             },
             {
                 id: 2,
-                title: '奏鸣曲',
-                singer: '莫扎特',
-                src: '/videos/1.mp3',
+                title: '大鱼',
+                singer: '周深',
+                src: '/videos/大鱼.mp3',
                 coverImgUrl: '/images/cover.png'
             },
             {
                 id: 3,
-                title: '欢乐颂',
-                singer: '贝多芬',
-                src: '/videos/1.mp3',
+                title: '错位时空',
+                singer: '艾希',
+                src: '/videos/错位时空.mp3',
                 coverImgUrl: '/images/cover.png'
             },
             {
                 id: 4,
-                title: '爱之梦',
-                singer: '李斯特',
-                src: '/videos/1.mp3',
+                title: '知否知否',
+                singer: '齐豫',
+                src: '/videos/知否知否.mp3',
                 coverImgUrl: '/images/cover.png'
             }
         ],
@@ -87,6 +87,8 @@ Page({
         let index = this.data.playIndex >= this.data.playlist.length - 1 ? 0 : this.data.playIndex + 1
         this.setMusic(index)
         if (this.data.state === 'running') {
+            this.pause()
+            this.audioCtx.seek(0)
             this.play()
         }
     },
