@@ -1,5 +1,3 @@
-const { getComponentCountFromAttributeName } = require("WechatXrFrame/loader/glTF/geometry/primitives/attributes/GLTFAttributesNode")
-
 // pages/module/music/music.js
 Page({
 
@@ -16,28 +14,28 @@ Page({
                 id: 1,
                 title: '钢琴协奏曲',
                 singer: '肖邦',
-                src: '/videos/起风了.mp3',
+                src: '/videos/1.mp3',
                 coverImgUrl: '/images/cover.png'
             },
             {
                 id: 2,
                 title: '奏鸣曲',
                 singer: '莫扎特',
-                src: '/videos/起风了.mp3',
+                src: '/videos/1.mp3',
                 coverImgUrl: '/images/cover.png'
             },
             {
                 id: 3,
                 title: '欢乐颂',
                 singer: '贝多芬',
-                src: '/videos/起风了.mp3',
+                src: '/videos/1.mp3',
                 coverImgUrl: '/images/cover.png'
             },
             {
                 id: 4,
                 title: '爱之梦',
                 singer: '李斯特',
-                src: '/videos/起风了.mp3',
+                src: '/videos/1.mp3',
                 coverImgUrl: '/images/cover.png'
             }
         ],
