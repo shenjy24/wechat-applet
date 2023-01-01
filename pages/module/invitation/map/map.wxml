@@ -1,2 +1,2 @@
-<!--pages/module/invitation/map/map.wxml-->
-<text>pages/module/invitation/map/map.wxml</text>
+<map longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" bindmarkertap="markertap"/>
+<button bindtap="getLocation">查看我的位置</button>

@@ -5,7 +5,39 @@ Page({
      * 页面的初始数据
      */
     data: {
+        latitude: 40.06021, 
+        longitude: 116.3433,
+        markers: [
+            {
+                iconPath: '/images/invitation/navi.png',
+                id: 0,
+                latitude: 40.06021,
+                longitude: 116.3433,
+                width: 50,
+                height: 50
+            }
+        ]
+    },
 
+    markertap() {
+        wx.openLocation({
+          latitude: this.data.latitude,
+          longitude: this.data.longitude,
+          name: 'XX大酒店',
+          address: '北京市海淀区XX路'
+        })
+    },
+
+    getLocation() {
+        wx.getLocation({
+          type: 'gcj02',
+          success(res) {
+              wx.openLocation({
+                latitude: res.latitude,
+                longitude: res.longitude,
+              })
+          }
+        })
     },
 
     /**

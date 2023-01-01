@@ -1,8 +1,7 @@
 /* pages/module/invitation/map/map.wxss */
-page {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
+@import "../common.wxss";
+
+map {
+    width: 100vw;
+    height: 100vh;
 }

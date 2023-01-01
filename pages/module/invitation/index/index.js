@@ -1,11 +1,38 @@
 // pages/module/invitation/invitation.js
 Page({
 
+    bgm: null,
+    music_url: 'http://music.163.com/song/media/outer/url?id=419485661.mp3',
+    music_coverImgUrl: 'https://s1.ax1x.com/2022/12/31/pS9bkLR.jpg',
+
     /**
      * 页面的初始数据
      */
     data: {
+        isPlayingMusic: false
+    },
 
+    play() {
+        if (this.data.isPlayingMusic) {
+            this.bgm.pause()
+        } else {
+            this.bgm.play()
+        }
+        this.setData({
+            isPlayingMusic: !this.data.isPlayingMusic
+        })
+    },
+
+    callGroom() {
+        wx.makePhoneCall({
+            phoneNumber: '13600000000',
+        })
+    },
+
+    callBride() {
+        wx.makePhoneCall({
+            phoneNumber: '15600000000',
+        })
     },
 
     /**
@@ -19,7 +46,17 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {
-
+        this.bgm = wx.getBackgroundAudioManager()
+        this.bgm.title = 'marry me'
+        // 专辑名称
+        this.bgm.epname = 'wedding'
+        this.bgm.singer = 'singer'
+        // 专辑封面
+        this.bgm.coverImgUrl = this.music_coverImgUrl
+        this.bgm.onCanplay(() => {
+            this.bgm.pause()
+        })
+        this.bgm.src = this.music_url
     },
 
     /**

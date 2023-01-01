@@ -1,0 +1,39 @@
+// 婚礼邀请函的tabBar
+"tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#ff4c91",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+        {
+            "pagePath": "pages/module/invitation/index/index",
+            "text": "邀请函",
+            "iconPath": "images/invitation/invite.png",
+            "selectedIconPath": "images/invitation/invite.png"
+        },
+        {
+            "pagePath": "pages/module/invitation/picture/picture",
+            "text": "照片",
+            "iconPath": "images/invitation/marry.png",
+            "selectedIconPath": "images/invitation/marry.png"
+        },
+        {
+            "pagePath": "pages/module/invitation/video/video",
+            "text": "美好时光",
+            "iconPath": "images/invitation/video.png",
+            "selectedIconPath": "images/invitation/video.png"
+        },
+        {
+            "pagePath": "pages/module/invitation/map/map",
+            "text": "婚礼地点",
+            "iconPath": "images/invitation/map.png",
+            "selectedIconPath": "images/invitation/map.png"
+        },
+        {
+            "pagePath": "pages/module/invitation/guest/guest",
+            "text": "宾客信息",
+            "iconPath": "images/invitation/guest.png",
+            "selectedIconPath": "images/invitation/guest.png"
+        }
+    ]
+}

@@ -5,7 +5,12 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        imgUrls: [
+            '/images/music/cover.png',
+            '/images/music/cover.png',
+            '/images/music/cover.png',
+            '/images/music/cover.png',
+        ]
     },
 
     /**

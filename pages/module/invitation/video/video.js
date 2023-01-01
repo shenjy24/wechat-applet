@@ -5,7 +5,23 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        movieList: [
+            {
+                create_time: '2018-07-25 20:00:00',
+                title: '海边随拍',
+                src: '/videos/forest.mp4'
+            },
+            {
+                create_time: '2018-07-26 20:00:00',
+                title: '勿忘心安',
+                src: '/videos/forest.mp4'
+            },
+            {
+                create_time: '2018-07-27 20:00:00',
+                title: '点滴记忆',
+                src: '/videos/forest.mp4'
+            }
+        ]
     },
 
     /**
