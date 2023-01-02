@@ -1,0 +1,4 @@
+<view class="navigator-view">
+    <navigator url="/pages/api/login/login">登陆</navigator>
+    <navigator url="/pages/api/userinfo/userinfo">用户信息</navigator>
+</view>

@@ -1,0 +1,13 @@
+/* pages/api/index/index.wxss */
+.navigator-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+navigator {
+    width: 5em;
+    border: 1rpx solid black;
+    text-align: center;
+    margin: 10rpx;
+}

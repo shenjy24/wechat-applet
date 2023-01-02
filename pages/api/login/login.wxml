@@ -1,0 +1,3 @@
+<view>
+    <text>登陆凭证: {{ token }}</text>
+</view>

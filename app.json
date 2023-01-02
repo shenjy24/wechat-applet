@@ -1,8 +1,8 @@
 {
-    "entryPagePath": "pages/module/invitation/index/index",
+    "entryPagePath": "pages/api/index/index",
     "permission": {
         "scope.userLocation": {
-            "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
         }
     },
     "pages": [
@@ -16,7 +16,10 @@
         "pages/module/invitation/picture/picture",
         "pages/module/invitation/video/video",
         "pages/module/invitation/map/map",
-        "pages/module/invitation/guest/guest"
+        "pages/module/invitation/guest/guest",
+        "pages/api/login/login",
+        "pages/api/userinfo/userinfo",
+        "pages/api/index/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

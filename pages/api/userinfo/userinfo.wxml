@@ -1,0 +1,22 @@
+<!--用户头像-->
+<!-- <open-data type="userAvatarUrl"></open-data> -->
+<!--用户昵称-->
+<!-- <open-data type="userNickName"></open-data> -->
+<!--用户性别 新版本不支持-->
+<!-- <open-data type="userGender" lang="zh_CN"></open-data> -->
+
+<view class="container">
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像昵称</button>
+        <block wx:else>
+            <!--用户头像-->
+            <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" mode="cover"></image>
+            <!--用户昵称-->
+            <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+            <!--用户所在城市-->
+            <text class="userinfo-nickname">{{ userInfo.city }}</text>
+            <!--用户性别-->
+            <open-data type="userGender" lang="zh_CN"></open-data>
+        </block>
+    </view>
+</view>

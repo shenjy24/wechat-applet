@@ -15,6 +15,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    appInfo: 'Hello Wechat Applet'
+    appInfo: 'Hello Wechat Applet',
+    token: ''
   }
 })
