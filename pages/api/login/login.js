@@ -1,7 +1,7 @@
 // pages/api/login/login.js
-import {
-    request
-  } from '../../../utils/request'
+import { code2session } from '../../../utils/api'
+
+const app = getApp()
 
 Page({
 
@@ -9,31 +9,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        token: ''
-    },
-
-    code2session() {
-        wx.login({
-            timeout: 5000,
-            success: (res) => {
-                if (res.code) {
-                    console.log("code2session code:" + res.code)
-                    request('/auth/code2session', {
-                        code: res.code
-                    }, 'GET', r => {
-                        console.log("调用code2session成功:" + JSON.stringify(r))
-                        this.setData({token: r.data})
-                        // 将token保存为公共数据（用于在多页面中访问）
-                        let app = getApp()
-                        app.globalData.token = r.data
-                        // 将token保存到数据缓存（下次打开小程序无需重新获取token）
-                        wx.setStorageSync('token', r.data)
-                    }, e => {
-                        console.log("调用code2session失败:" + JSON.stringify(e))
-                    })
-                }
-            }
-        })
+        
     },
 
     /**
@@ -43,12 +19,11 @@ Page({
         wx.checkSession({
             success: () => {
                 console.log("session有效")
-                let app = getApp()
                 this.setData({token: app.globalData.token})
             },
             fail: () => {
                 console.log("session失效")
-                this.code2session()
+                code2session()
             },
         })
     },

@@ -1,17 +1,11 @@
-.container {
-    height: 100%;
+.userinfo-view {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 200rpx 0;
     box-sizing: border-box;
-}
-
-.userinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .userinfo-avatar {
@@ -22,5 +16,10 @@
 }
 
 .userinfo-nickname {
-    color: #aaa;
+    margin: 50rpx 0;
+    border: 1px solid #FFFAF0;
+}
+
+.userinfo-button {
+    margin-top: 200rpx;
 }
