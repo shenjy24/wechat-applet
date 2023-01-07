@@ -1,0 +1,8 @@
+<view class="data" bindtap="info">
+    个人资料
+    <image class="arrow" src="/images/personal/home.png"></image>
+</view>
+<view class="data" bindtap="order">
+    订单物流查询
+    <image class="arrow" src="/images/personal/arrow.png"></image>
+</view>

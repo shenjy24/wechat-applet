@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "pages/api/index/index",
+    "entryPagePath": "pages/module/personal/index/index",
     "permission": {
         "scope.userLocation": {
             "desc": "你的位置信息将用于小程序位置接口的效果展示"
@@ -19,7 +19,13 @@
         "pages/module/invitation/guest/guest",
         "pages/api/login/login",
         "pages/api/userinfo/userinfo",
-        "pages/api/index/index"
+        "pages/api/index/index",
+        "pages/module/personal/index/index",
+        "pages/module/personal/address/address",
+        "pages/module/personal/person/person",
+        "pages/module/personal/order/order",
+        "pages/module/personal/detail/detail",
+        "pages/module/personal/modify/modify"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -34,34 +40,16 @@
         "backgroundColor": "#ffffff",
         "list": [
             {
-                "pagePath": "pages/module/invitation/index/index",
-                "text": "邀请函",
-                "iconPath": "images/invitation/invite.png",
-                "selectedIconPath": "images/invitation/invite.png"
+                "pagePath": "pages/module/personal/index/index",
+                "text": "主页",
+                "iconPath": "images/personal/home.png",
+                "selectedIconPath": "images/personal/home.png"
             },
             {
-                "pagePath": "pages/module/invitation/picture/picture",
-                "text": "照片",
-                "iconPath": "images/invitation/marry.png",
-                "selectedIconPath": "images/invitation/marry.png"
-            },
-            {
-                "pagePath": "pages/module/invitation/video/video",
-                "text": "美好时光",
-                "iconPath": "images/invitation/video.png",
-                "selectedIconPath": "images/invitation/video.png"
-            },
-            {
-                "pagePath": "pages/module/invitation/map/map",
-                "text": "婚礼地点",
-                "iconPath": "images/invitation/map.png",
-                "selectedIconPath": "images/invitation/map.png"
-            },
-            {
-                "pagePath": "pages/module/invitation/guest/guest",
-                "text": "宾客信息",
-                "iconPath": "images/invitation/guest.png",
-                "selectedIconPath": "images/invitation/guest.png"
+                "pagePath": "pages/module/personal/person/person",
+                "text": "个人中心",
+                "iconPath": "images/personal/person.png",
+                "selectedIconPath": "images/personal/person.png"
             }
         ]
     },

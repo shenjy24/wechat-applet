@@ -1,0 +1,21 @@
+// 个人中心的tabBar
+"tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#ff4c91",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+        {
+            "pagePath": "pages/module/personal/index/index",
+            "text": "主页",
+            "iconPath": "images/personal/home.png",
+            "selectedIconPath": "images/personal/home.png"
+        },
+        {
+            "pagePath": "pages/module/personal/person/person",
+            "text": "个人中心",
+            "iconPath": "images/personal/person.png",
+            "selectedIconPath": "images/personal/person.png"
+        }
+    ]
+}

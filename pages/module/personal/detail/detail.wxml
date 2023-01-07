@@ -1,0 +1,17 @@
+<image src="{{ imgUrl }}" mode="aspectFill" bindtap="changeAvatar"></image>
+
+<view>
+    <view class="fl">昵称</view>
+    <view class="rl">
+        {{username}}
+        <view class="arrow">
+            
+        </view>
+    </view>
+    <view>
+        <view class="fl">性别</view>
+        <view class="rl">{{gender}}<view class="arrow"></view></view>
+    </view>
+</view>
+
+<button bindtap="jump" type="primary">修改资料</button>
