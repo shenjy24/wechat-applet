@@ -15,7 +15,7 @@ const formatNumber = n => {
 }
 
 const checkName = data => {
-    var reg = /^[\u4E00-\u9FA5A-Za-z]+$/
+    var reg = /^[\u4E00-\u9FA5A-Za-z·]+$/
     return check(data, reg, '姓名输入错误！')
 }
 

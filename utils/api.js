@@ -27,3 +27,28 @@ export const code2session = (callback) => {
     })
 
 }
+
+export const updateUserProfile = (avatar, nickname, callback) => {
+    request('/auth/updateUserProfile', {
+        avatar: avatar,
+        nickname: nickname
+    }, 'GET', r => {
+        if (callback) {
+            callback(r.data)
+        }
+    }, e => {
+        console.log("调用updateUserProfile失败:" + JSON.stringify(e))
+    })
+}
+
+export const getUserProfile = (callback) => {
+    request('/auth/getUserProfile', {}, 'GET',
+        r => {
+            if (callback) {
+                callback(r.data)
+            }
+        }, e => {
+            console.log("调用getUserProfile失败:" + JSON.stringify(e))
+        })
+}
+

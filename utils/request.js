@@ -1,5 +1,5 @@
 var app = getApp()
-const baseUrl = "http://localhost:18080/"
+const baseUrl = "http://localhost:18080"
 
 export const request = (url = '', data = {}, method = 'GET', callback = null, errCallback = null) => {
   let token = wx.getStorageSync('token')

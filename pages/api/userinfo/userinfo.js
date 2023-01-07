@@ -1,9 +1,7 @@
 // pages/api/userinfo/userinfo.js
 import { request } from '../../../utils/request'
-import { code2session } from '../../../utils/api'
+import { code2session, getUserProfile, updateUserProfile } from '../../../utils/api'
 const util = require('../../../utils/util.js')
-
-const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
 
 Page({
 
@@ -12,23 +10,23 @@ Page({
      */
     data: {
         userProfile: {},
-        avatarUrl: defaultAvatarUrl
+        avatarUrl: '',
+        nickname: ''
     },
 
     formSubmit(e) {
         let nickname = e.detail.value.nickname
-        console.log(util)
         if (util.checkName(nickname)) {
-            request('/auth/updateUserProfile', {
-                avatarUrl: this.data.avatarUrl,
-                nickname: nickname
-            }, 'GET', r => {
-                console.log("调用updateUserProfile成功:" + JSON.stringify(r))
+            updateUserProfile(this.data.avatarUrl, nickname, r => {
                 this.setData({
-                    userProfile: r.data
+                    avatarUrl: r.avatar,
+                    nickname: r.nickname
                 })
-            }, e => {
-                console.log("调用updateUserProfile失败:" + JSON.stringify(e))
+            })
+        } else {
+            wx.showToast({
+                title: '昵称格式不正确',
+                icon: 'none'
             })
         }
     },
@@ -40,7 +38,7 @@ Page({
     },
 
     // wx.getUserProfile 新版本废弃了
-    getUserProfile() {
+    getUserProfileOldVersion() {
         // wx.getUserProfile只能使用catchtap或者bindtap进行调用
         wx.getUserProfile({
             lang: 'zh_CN',
@@ -69,8 +67,16 @@ Page({
      */
     onLoad(options) {
         code2session(token => {
-            console.log(token)
-            this.getUserProfile()
+            console.log('token:' + token)
+            getUserProfile(r => {
+                console.log(JSON.stringify(r))
+                this.setData({
+                    avatarUrl: r.avatar,
+                    nickname: r.nickname
+                })
+                console.log(this.data.avatarUrl)
+                console.log(this.data.nickname)
+            })
         })
     },
 

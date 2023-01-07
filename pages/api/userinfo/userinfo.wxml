@@ -4,7 +4,7 @@
         <button open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
             <image class="userinfo-avatar" src="{{ avatarUrl }}" mode="cover"></image>
         </button>
-        <input name="nickname" type="nickname" class="weui-input userinfo-nickname" placeholder="请输入昵称" />
+        <input name="nickname" type="nickname" value="{{ nickname }}" class="weui-input userinfo-nickname" placeholder="请输入昵称" />
         <button class="userinfo-button" form-type="submit">提交</button>
     </view>
 </form>
