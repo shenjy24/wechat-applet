@@ -52,3 +52,17 @@ export const getUserProfile = (callback) => {
         })
 }
 
+export const getExpressTrack = (com, num, callback) => {
+    request('/express/queryTrack',
+        {
+            com: com,
+            num: num
+        },
+        'POST', r => {
+            if (callback) {
+                callback(r.data)
+            }
+        }, e => {
+            console.log("调用getExpressTrack失败:" + JSON.stringify(e))
+        })
+}

@@ -1,1 +1,37 @@
 /* pages/module/personal/order/order.wxss */
+.order {
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+}
+
+.company {
+    display: flex;
+    margin-bottom: 50rpx;
+}
+
+.label {
+    width: 8em;
+}
+
+.input {
+    flex: 1;
+    border: 1rpx solid black;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 100rpx;
+}
+
+.orderlist {
+    margin-top: 30rpx;
+}
+
+.fontcolor {
+    font-size: 30rpx;
+}
+
+.content {
+    margin-bottom: 20rpx;
+}

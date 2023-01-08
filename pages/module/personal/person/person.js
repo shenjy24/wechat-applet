@@ -16,9 +16,10 @@ Page({
     },
 
     order(e) {
+        console.log('order')
         // 保留当前页面，跳转到应用内的订单查询页面
         wx.redirectTo({
-          url: 'pages/module/personal/order/order',
+          url: '../order/order',
         })
     },
 

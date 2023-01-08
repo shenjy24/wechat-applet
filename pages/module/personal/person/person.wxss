@@ -1,1 +1,11 @@
 /* pages/module/personal/person/person.wxss */
+.data {
+    display: flex;
+    justify-content: space-between;
+    padding: 10rpx 10rpx;
+}
+
+.arrow {
+    width: 50rpx;
+    height: 50rpx;
+}

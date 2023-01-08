@@ -1,3 +1,5 @@
+import { getExpressTrack } from "../../../../utils/api"
+
 const app = getApp()
 Page({
 
@@ -6,10 +8,39 @@ Page({
      */
     data: {
         no: null,
-        company: ['sf', 'sto', 'yt', 'yd', 'tt'],
-        com: ['顺丰', '申通', '圆通', '韵达', '天天'],
+        company: ['shunfeng', 'shentong', 'yuantong', 'yunda', 'jd'],
+        com: ['顺丰', '申通', '圆通', '韵达', '京东'],
         index: 0,
         expressInfo: null,
+    },
+
+    search() {
+        if (!this.data.no) {
+            wx.showToast({
+              title: '运单号不能为空',
+              icon: 'error'
+            })
+            return
+        }
+
+        getExpressTrack(this.data.company[this.data.index], this.data.no, r => {
+            console.log(r)
+            this.setData({
+                expressInfo: r
+            })
+        })
+    },
+
+    noInput(e) {
+        this.setData({
+            no: e.detail.value
+        })
+    },
+
+    companyInput(e) {
+        this.setData({
+            index: e.detail.value
+        })
     },
 
     /**
