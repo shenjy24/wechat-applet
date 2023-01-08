@@ -5,7 +5,20 @@ Page({
      * 页面的初始数据
      */
     data: {
+        addressInfo: null
+    },
 
+    chooseAddress(e) {
+        wx.chooseAddress({
+            success: (res) => {
+                this.setData({
+                    addressInfo: res
+                })
+            },
+            fail: (err) => {
+                console.log(err)
+            }
+        })
     },
 
     /**

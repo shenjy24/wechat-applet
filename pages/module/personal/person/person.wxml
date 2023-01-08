@@ -6,3 +6,11 @@
     订单物流查询
     <image class="arrow" src="/images/personal/arrow.png"></image>
 </view>
+<view class="data" bindtap="address">
+    选择收获地址
+    <image class="arrow" src="/images/personal/arrow.png"></image>
+</view>
+<view class="data" bindtap="contact">
+    客服联系方式
+    <image class="arrow" src="/images/personal/arrow.png"></image>
+</view>

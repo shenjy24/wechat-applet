@@ -23,6 +23,19 @@ Page({
         })
     },
 
+    address(e) {
+        // 保留当前页面，跳转到应用内的选择收货地址页面
+        wx.redirectTo({
+          url: '../address/address',
+        })
+    },
+
+    contact(e) {
+        wx.makePhoneCall({
+          phoneNumber: '400-321',
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
