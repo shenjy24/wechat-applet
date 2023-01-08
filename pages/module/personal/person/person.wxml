@@ -1,16 +1,37 @@
-<view class="data" bindtap="info">
-    <view>个人资料</view>
-    <image class="arrow" src="/images/personal/arrow.png"></image>
-</view>
-<view class="data" bindtap="order">
-    订单物流查询
-    <image class="arrow" src="/images/personal/arrow.png"></image>
-</view>
-<view class="data" bindtap="address">
-    选择收获地址
-    <image class="arrow" src="/images/personal/arrow.png"></image>
-</view>
-<view class="data" bindtap="contact">
-    客服联系方式
-    <image class="arrow" src="/images/personal/arrow.png"></image>
+<view class="person">
+    <view class="icon-view">
+        <image class="icon" src="{{userInfo.avatar}}" mode="aspectFill" bindtap="jump"></image>
+    </view>
+    <view class="order">
+        <view class="order-item">
+            <image class="order-image" src="/images/personal/wait-pay.png"></image>
+            <text>待付款</text>
+        </view>
+        <view class="order-item">
+            <image class="order-image" src="/images/personal/refund.png"></image>
+            <text>已退款</text>
+        </view>
+        <view class="order-item">
+            <image class="order-image" src="/images/personal/order.png"></image>
+            <text>全部订单</text>
+        </view>
+    </view>
+    <view>
+        <view class="data" bindtap="info">
+            <view>个人资料</view>
+            <image class="arrow" src="/images/personal/arrow.png"></image>
+        </view>
+        <view class="data" bindtap="order">
+            订单物流查询
+            <image class="arrow" src="/images/personal/arrow.png"></image>
+        </view>
+        <view class="data" bindtap="address">
+            选择收获地址
+            <image class="arrow" src="/images/personal/arrow.png"></image>
+        </view>
+        <view class="data" bindtap="contact">
+            客服联系方式
+            <image class="arrow" src="/images/personal/arrow.png"></image>
+        </view>
+    </view>
 </view>

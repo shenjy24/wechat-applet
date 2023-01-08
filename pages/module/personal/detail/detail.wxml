@@ -1,17 +1,17 @@
-<image src="{{ imgUrl }}" mode="aspectFill" bindtap="changeAvatar"></image>
+<view class="detail">
+    <view class="item" bindtap="changeAvatar">
+        <text class="label">头像</text>
+        <image class="icon" src="{{ userInfo.avatar }}" mode="aspectFill"></image>
+        <image class="arrow" src="/images/personal/arrow.png"></image>
+    </view>
+    <view class="item margin-right">
+        <text class="label">昵称</text>
+        <text>{{ userInfo.nickname }}</text>
+    </view>
+    <view class="item margin-right">
+        <view class="label">性别</view>
+        <view>{{ userInfo.gender }}</view>
+    </view>
 
-<view>
-    <view class="fl">昵称</view>
-    <view class="rl">
-        {{username}}
-        <view class="arrow">
-            
-        </view>
-    </view>
-    <view>
-        <view class="fl">性别</view>
-        <view class="rl">{{gender}}<view class="arrow"></view></view>
-    </view>
+    <button class="button" bindtap="jump" type="primary">修改资料</button>
 </view>
-
-<button bindtap="jump" type="primary">修改资料</button>

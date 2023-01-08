@@ -1,1 +1,34 @@
 /* pages/module/personal/detail/detail.wxss */
+.detail {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20rpx 20rpx;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+
+.label {
+    flex: 1;
+}
+
+.icon {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.arrow {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.margin-right {
+    padding-right: 30rpx;
+}
+
+.button {
+    margin-top: 30rpx;
+}

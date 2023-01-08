@@ -1,1 +1,18 @@
 /* pages/module/personal/modify/modify.wxss */
+.modify {
+    margin: 0 10rpx;
+}
+
+.item {
+    display: flex;
+    margin-bottom: 20rpx;
+}
+
+.button {
+    margin-top: 30rpx;
+}
+
+.input {
+    width: 500rpx;
+    border: 1rpx solid gray;
+}

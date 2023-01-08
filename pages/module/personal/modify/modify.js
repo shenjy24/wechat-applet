@@ -1,11 +1,12 @@
 // pages/module/personal/modify/modify.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        username: '',
+        nickname: '',
         gender: '男'
     },
 
@@ -15,9 +16,11 @@ Page({
         let prevPage = pages[pages.length - 2] // 获取上一个页面对象
         // 调用上一个页面的setData()方法，把数据存到上一个页面中去
         prevPage.setData({
-            username: formData.username,
-            gender: formData.gender
+            'userInfo.nickname': formData.nickname,
+            'userInfo.gender': formData.gender
         })
+        app.globalData.userInfo.nickname = formData.nickname
+        app.globalData.userInfo.gender = formData.gender
         // 返回到上一个页面
         wx.navigateBack()
     },
@@ -28,7 +31,7 @@ Page({
     onLoad(options) {
         this.setData({
             // 收到数据后使用decodeURIComponent()解码
-            username: decodeURIComponent(options.username),
+            nickname: decodeURIComponent(options.nickname),
             gender: decodeURIComponent(options.gender)
         })
     },

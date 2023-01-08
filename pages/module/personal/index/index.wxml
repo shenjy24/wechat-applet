@@ -1,1 +1,21 @@
-<image src="/images/personal/person.png" mode="aspectFill" bindtap="changeImage"></image>
+<view class="personal">
+    <view class="title">欢迎来到我的个人页</view>
+    <image class="icon" src="{{userInfo.avatar}}" mode="aspectFill" bindtap="jump"></image>
+    <view class="content">
+        <view class="item">
+            昵称：{{ userInfo.nickname }}
+        </view>
+        <view class="item">
+            星座：{{ userInfo.constellation }}
+        </view>
+        <view class="item">
+            兴趣：{{ userInfo.hobby }}
+        </view>
+        <view class="item">
+            QQ：{{ userInfo.qq }}
+        </view>
+        <view class="item">
+            电话：{{ userInfo.tel }}
+        </view>
+    </view>
+</view>

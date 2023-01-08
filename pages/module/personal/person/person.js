@@ -1,18 +1,19 @@
 // pages/module/personal/person/person.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        userInfo: null,
     },
 
     info(e) {
         // 第一种方式：保留当前页面，单击页面左上角箭头，返回上一个页面
-        wx.navigateTo({ url: 'pages/module/personal/detail/detail' })
+        wx.navigateTo({ url: '../detail/detail' })
         // 第二种方式：关闭当前页，左上角没有返回箭头，不能返回上一个页
-        // wx.redirectTo({ url: '/pages/detail/detail' })
+        // wx.redirectTo({ url: '../detail/detail' })
     },
 
     order(e) {
@@ -40,7 +41,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        console.log('person: onLoad')
+        this.setData({
+            userInfo: app.globalData.userInfo
+        })
     },
 
     /**
@@ -54,7 +58,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        console.log('person: onShow')
+        this.setData({
+            userInfo: app.globalData.userInfo
+        })
     },
 
     /**
