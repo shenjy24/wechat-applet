@@ -1,11 +1,13 @@
 {
-    "entryPagePath": "pages/module/personal/index/index",
+    "entryPagePath": "pages/module/weather/weather",
     "permission": {
         "scope.userLocation": {
             "desc": "你的位置信息将用于小程序位置接口的效果展示"
         }
     },
-    "requiredPrivateInfos": ["chooseAddress"],
+    "requiredPrivateInfos": [
+        "chooseAddress"
+    ],
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
@@ -26,7 +28,8 @@
         "pages/module/personal/person/person",
         "pages/module/personal/order/order",
         "pages/module/personal/detail/detail",
-        "pages/module/personal/modify/modify"
+        "pages/module/personal/modify/modify",
+        "pages/module/weather/weather"
     ],
     "window": {
         "backgroundTextStyle": "light",
