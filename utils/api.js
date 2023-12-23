@@ -1,4 +1,4 @@
-import { request } from './request'
+import { request, requestBase } from './request'
 
 const app = getApp()
 
@@ -65,4 +65,25 @@ export const getExpressTrack = (com, num, callback) => {
         }, e => {
             console.log("调用getExpressTrack失败:" + JSON.stringify(e))
         })
+}
+
+export const wechatLogin = (name, avatar, phone) => {
+
+    wx.uploadFile({
+        url: 'http://localhost:8080/applet/user/updateUser',
+        filePath: avatar,
+        name: 'avatar',
+        formData: {
+            userId: "1737371904096694274",
+            name: name,
+            phone: phone
+        },
+        success (res) {
+          const data = res.data
+          console.log("upload file", data)
+        },
+        fail (e) {
+            console.log("upload file error", e)
+        }
+      })
 }
