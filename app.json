@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "pages/module/weather/weather",
+    "entryPagePath": "pages/weui/uploader/uploader",
     "permission": {
         "scope.userLocation": {
             "desc": "你的位置信息将用于小程序位置接口的效果展示"
@@ -29,7 +29,8 @@
         "pages/module/personal/order/order",
         "pages/module/personal/detail/detail",
         "pages/module/personal/modify/modify",
-        "pages/module/weather/weather"
+        "pages/module/weather/weather",
+        "pages/weui/uploader/uploader"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -62,5 +63,8 @@
     "requireBackgroundModes": [
         "audio"
     ],
-    "debug": false
+    "debug": false,
+    "useExtendedLib": {
+        "weui": true
+    }
 }
