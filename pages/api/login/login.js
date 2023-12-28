@@ -16,6 +16,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        code2session()
         wx.checkSession({
             success: () => {
                 console.log("session有效")
@@ -23,7 +24,6 @@ Page({
             },
             fail: () => {
                 console.log("session失效")
-                code2session()
             },
         })
     },
