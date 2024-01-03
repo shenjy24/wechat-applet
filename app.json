@@ -1,5 +1,5 @@
 {
-    "entryPagePath": "pages/api/login/login",
+    "entryPagePath": "pages/module/notify/notify",
     "permission": {
         "scope.userLocation": {
             "desc": "你的位置信息将用于小程序位置接口的效果展示"
@@ -30,7 +30,8 @@
         "pages/module/personal/detail/detail",
         "pages/module/personal/modify/modify",
         "pages/module/weather/weather",
-        "pages/weui/uploader/uploader"
+        "pages/weui/uploader/uploader",
+        "pages/module/notify/notify"
     ],
     "window": {
         "backgroundTextStyle": "light",

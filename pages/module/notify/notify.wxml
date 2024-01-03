@@ -1,0 +1,2 @@
+<!--pages/module/notify.wxml-->
+<button bindtap="requestSubscribeMessage">允许通知</button>
